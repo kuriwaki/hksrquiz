@@ -1,0 +1,13 @@
+name: ABtest
+title: ABtest
+username:
+account: kuriwaki
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 3414334
+bundleId: 4004053
+url: https://kuriwaki.shinyapps.io/ABtest/
+when: 1608258684.80667
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: reshape.html

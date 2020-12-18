@@ -1,0 +1,54 @@
+---
+title: "A/B Test example"
+output: learnr::tutorial
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+library(learnr)
+knitr::opts_chunk$set(echo = FALSE)
+# assign student
+group <- sample(c("A", "B"), size = 1)
+```
+
+### AB Testing Example
+
+
+### Test
+
+In the setup, `group` is randomly assigned.
+
+```
+group <- sample(c("A", "B"), size = 1)
+```
+
+An internal message is printed listing the message with `context="server-start"`.
+
+```{r context="server-start"}
+  # log which group student is assigned to
+  message("student assigned: ", group)
+```
+
+This is a duplicate, but without server-start.
+
+```{r}
+message("student assigned: ", group)
+```
+
+
+Now we randomize the display of the question depending on the group. One code chunk with the question about the letter "A" gets `include = (group == "A")`, so it _should_ be displayed only when "A" is randomly assigned. Another gets the question "B" if `group == "B"`.
+
+```{r letter-a, include = (group == "A")}
+question("What number is the letter A?",
+  answer("1", correct = TRUE),
+  answer("23")
+)
+```
+
+
+```{r letter-b, include = (group == "B")}
+question("What number is the letter B?",
+  answer("2", correct = TRUE),
+  answer("23")
+)
+```

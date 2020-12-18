@@ -1,0 +1,12 @@
+name: reshape
+title: reshape
+username:
+account: kuriwaki
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 3414320
+bundleId: 4004033
+url: https://kuriwaki.shinyapps.io/reshape/
+when: 1608258243.78734
+asMultiple: FALSE
+asStatic: FALSE
